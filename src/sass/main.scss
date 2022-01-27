@@ -1,6 +1,22 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
+//  Переменные и базовые стили
+@import './utils/variables';
+@import './utils/mixins';
+@import './utils/breakpoints';
+@import './base/reset';
+@import './base/base-styles';
+@import './base/base-styles';
 
-// Стили для файла с примером HTML-фрагмента
+//  Отдельные компоненты
+@import './components/button';
+@import './components/logo';
+@import './components/socials';
+
+//  Основные секции веб страницы
+@import './layout/hero-header';
+@import './layout/products';
+@import './layout/about';
+@import './layout/advantages';
+@import './layout/gallery';
+@import './layout/customer-reviews';
+@import './layout/contacts';
+@import './layout/footer';
