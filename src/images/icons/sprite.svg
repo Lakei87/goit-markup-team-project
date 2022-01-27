@@ -57,11 +57,11 @@
 
 <!-- Меню -->
 <symbol id="icon-close" viewBox="0 0 32 32">
-<path fill="none" stroke="#fff" style="stroke: var(--color1, #fff)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2" d="M2.52 2l26.96 28M2 29.48l28-26.96"></path>
+<path d="M7.29292 7.98668L0.898996 1.34684L1.61932 0.653198L8.01324 7.29304L14.6531 0.899118L15.3467 1.61944L8.70688 8.01336L15.1008 14.6532L14.3805 15.3468L7.98656 8.707L1.34672 15.1009L0.653076 14.3806L7.29292 7.98668Z"></path>
 </symbol>
 
 <symbol id="icon-burger" viewBox="0 0 46 32">
-<path fill="none" stroke="#d41443" style="stroke: var(--color8, #d41443)" stroke-linejoin="miter" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="2.2857" d="M0 2.286h45.714M0 16h45.714M0 29.714h45.714"></path>
+<path d="M20 1.5H0V0.5H20V1.5ZM20 7.5H0V6.5H20V7.5ZM20 13.5H0V12.5H20V13.5Z"></path>
 </symbol>
 
 </defs>
