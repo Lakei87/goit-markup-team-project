@@ -173,7 +173,7 @@
     background: $text-secondary;
     border-radius: 22px;
     border: transparent;
-    cursor: not-allowed;
+    cursor: pointer;
 
     @media screen  and (min-width:$tablet){
         font-size: 16px;
@@ -191,3 +191,117 @@
     height: 8px;
 }
 
+
+
+
+
+
+
+
+
+.backdrop{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    overflow: scroll;
+
+    opacity: 1;
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media screen and (max-width:767px){
+        padding-left: 15px;
+        padding-top: 93px;  
+        padding-right: 15px;
+        padding-bottom: 94px;
+        z-index: 2;
+    }
+    @media screen and (min-width:768px){
+        padding-left: 159px;
+        padding-top: 208px;  
+        padding-right: 159px;
+        padding-bottom: 207px;
+        z-index: 2;
+    }
+}
+.backdrop.is-hidden{
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+}
+.modal{
+    // width: 450px;
+    // height: 609px;
+    background-color: rgb(245, 38, 210);
+    
+    
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    position: absolute;
+        top: 50%;
+        left: 50%;
+        
+        transform: translate(-50%, -50%);
+        @media screen and (min-width:480px) {
+            position: relative;
+           
+     
+             top: 50%;
+             left: 50%;
+             
+             transform: translate(-50%, -50%);
+         }
+    @media screen and (min-width:768px) {
+       position: relative;
+       
+
+        top: 50%;
+        left: 50%;
+        
+        transform: translate(-50%, -50%);
+    }
+    @media screen and (min-width:1280px) {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        
+        transform: translate(-50%, -50%);
+        min-width: 300px;
+        min-height: 300px;
+    }
+    
+}
+.modal__button{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+
+    transition:  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin: 0;
+
+    width: 30px;
+    height: 30px;
+    background-color: rgb(247, 88, 15);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 1;
+    &:hover,
+    &:focus{
+      fill: green;
+}
+    @media screen and (max-width:767px) {
+        // top: 101px;
+        // right: 23px;
+    }
+    @media screen and (min-width:768px) {
+        top: 8px;
+        right: 8px;
+    }
+}

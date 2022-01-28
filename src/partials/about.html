@@ -21,10 +21,10 @@
     <p class="about_text">
         Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt. Aliquam erat volutpat. Aenean accumsan.
     </p>
-    <button class="about_button" date-menu-button>
+    <button class="about_button" type="button" data-modal-open>
         Read more
         <svg class="about_icon">
-            <use href="./images/icons/sprite.svg#icon-arrow"></use>
+            <use href="./images/icons/sprite.svg#icon-corner"></use>
         </svg>
     </button>
     </div>
@@ -32,6 +32,51 @@
 </ul>
 
     </div>
+
     
 </section>
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+        <button class="modal__button" data-modal-close type="button">
+            
+            Закрыть
+        </button>
+        <div>
+            <p>
+                Корова
+Коро́ва — отелившаяся самка крупного рогатого скота, то есть домашнего быка. Прежде чем стать коровой, самка быка является тёлкой (до первого оплодотворения), после оплодотворения до первых родов она называется нетелью. Коровы используются для получения потомства, а также молочной и мясной продукции. Коровами называются также самки некоторых других парнокопытных, к примеру, зубров.
+            </p>
+        </div>
+    </div>
+    
+
+<script>
+(() => {
+    const refs = {
+      openModalBtn: document.querySelector('[data-modal-open]'),
+      closeModalBtn: document.querySelector('[data-modal-close]'),
+      modal: document.querySelector('[data-modal]'),
+    };
+  
+    refs.openModalBtn.addEventListener('click', toggleModal);
+    refs.closeModalBtn.addEventListener('click', toggleModal);
+  
+    function toggleModal() {
+      refs.modal.classList.toggle('is-hidden');
+    }
+  })();
+</script>
