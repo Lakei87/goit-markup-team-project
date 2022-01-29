@@ -1,6 +1,10 @@
 .gallery {
   background: linear-gradient(to bottom, $bg-color-primery 55%, white 45%);
   padding-bottom: 0;
+
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    background: linear-gradient(to bottom, $bg-color-primery 65%, white 35%);
+  }
 }
 
 .gallery-container {
@@ -10,39 +14,44 @@
   align-items: center;
   justify-items: center;
 
-  // @media screen and (min-width: 320px) {
-  //   height: 122px;
-  // }
-  @media screen and (min-width: $tablet) {
+  @media screen and (width: 320px) {
+    height: 122px;
+  }
+  @media screen and (min-width: 320px) {
+    gap: 0.2em;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
     height: 264px;
+    gap: 0.4em;
   }
   @media screen and (min-width: $desktop) {
     height: 430px;
+    gap: 0.5em;
   }
 }
 
 .gallery-container__grid {
-  @media screen and (min-width: 320px) and (max-width: 767px) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  @media screen and (min-width: $tablet) and (max-width: 1279px) {
-    margin: 0 5px;
-  }
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .gallery-container__grid--3 {
   grid-column: 3 / span 2;
 }
 .gallery-container__grid--5 {
-  @media screen and (min-width: $mobile) {
-    height: 135px;
+  display: grid;
+  align-content: inherit;
+  height: 85%;
+  grid-template-rows: [line-start] 25% [line2] 25% [line3] 25% [line4] 25% [line-end];
+
+  @media screen and (min-width: 350px) {
+    height: 88%;
   }
-  @media screen and (min-width: $tablet) {
-    height: 220px;
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    grid-template-rows: [line-start] 65px [line2] 65px [line3] 65px [line4] 65px [line-end];
   }
   @media screen and (min-width: $desktop) {
-    height: 350px;
+    grid-template-rows: [line-start] 95px [line2] 95px [line3] 95px [line4] 95px [line-end];
   }
 }
 
@@ -50,13 +59,10 @@
   display: block;
   max-width: 100%;
   height: auto;
-  @media screen and (min-width: 320px) and (max-width: 767px) {
-    width: 90%;
-  }
 }
 .gallery-container__grid-item:nth-child(odd) {
   @media screen and (min-width: 320px) {
-    margin: 3px;
+    margin-bottom: 3px;
   }
 
   @media screen and (min-width: $tablet) {
@@ -75,13 +81,18 @@
 }
 
 .gallery-container__grid-item--5 {
+  align-self: flex-start;
+
   @media screen and (min-width: 320px) and (max-width: 767px) {
-    align-self: flex-start;
     width: 50%;
-    padding-left: 5px;
   }
   @media screen and (min-width: $tablet) and (max-width: 1279px) {
     width: 90px;
     height: 90px;
   }
+}
+
+.gallery-container__grid-item--8 {
+  grid-row-start: line-start;
+  grid-row-end: line3;
 }
