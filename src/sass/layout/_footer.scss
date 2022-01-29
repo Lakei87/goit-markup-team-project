@@ -1,4 +1,4 @@
-.foot-title {
+.footer-text {
   font-family: $secondary-font-family;
   font-style: normal;
   font-weight: normal;
@@ -22,7 +22,7 @@
     color: #d41443;
   }
 }
-.foot-social {
+.footer-social {
   text-align: right;
 
   &__list {
@@ -67,11 +67,11 @@
   }
 }
 
-.foot-social__svg {
+.footer-social__svg {
   fill: #fff;
 }
 
-.foot__text {
+.footer__text {
   position: relative;
   font-weight: bold;
   font-size: 14px;
