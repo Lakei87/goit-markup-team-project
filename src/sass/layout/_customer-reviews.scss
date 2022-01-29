@@ -8,6 +8,9 @@
   display: flex;
   justify-content: center;
   margin-bottom: 29px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 19px;
+  }
 }
 .customer__content {
   background-color: $section-bg-secondary;
@@ -21,20 +24,28 @@
   margin-bottom: 52px;
   overflow: hidden;
   z-index: 1;
-  @media screen and (min-width: 480px) {
+
+  &::before {
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  @media screen and (min-width: $mobile) {
     font-family: 'DM Sans', sans-serif;
     font-weight: 500;
     font-size: 12px;
     line-height: 2.58;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $tablet) {
     width: 620px;
     padding-top: 47px;
     padding-left: 80px;
     padding-right: 80px;
-    padding-bottom: 34px;
+    padding-bottom: 24px;
+
+    background-color: rgba(250, 250, 250, 0.4);
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: $desktop) {
     width: 926px;
     padding-top: 47px;
     padding-left: 89px;
@@ -42,11 +53,7 @@
     padding-bottom: 39px;
   }
 }
-.customer__content::before {
-  content: '';
-  background-repeat: no-repeat;
-  background-position: center center;
-}
+
 .icon-quotes::before {
   background-image: url(../images/icons/icon-quotes.svg);
   position: absolute;
@@ -55,12 +62,15 @@
   height: 40px;
   top: 26px;
   left: 69px;
+  @media screen and (min-width: $tablet) {
+    top: 28px;
+    left: 40px;
+  }
 }
 .customer__text {
   position: inherit;
   text-align: center;
-  font-family: 'DM Sans', sans-serif;
-  font-style: normal;
+  font-family: $primary-font-family;
   font-weight: 500;
   font-size: 12px;
   line-height: 2.55;
@@ -69,7 +79,7 @@
   &::after {
     content: '';
     background: repeating-linear-gradient(
-      rgb(225, 225, 225) 0px,
+      rgba(225, 225, 225) 0px,
       rgb(250, 250, 250) 2px,
       rgb(250, 250, 250) 31px
     );
@@ -80,16 +90,35 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: -1;
+    @media screen and (min-width: $tablet) {
+      width: 108%;
+      top: 80%;
+      background: repeating-linear-gradient(
+        rgba(225, 225, 225) 0px,
+        rgb(250, 250, 250, 0.4) 2px,
+        rgb(250, 250, 250, 0.4) 31px
+      );
+    }
+  }
+
+  @media screen and (min-width: $tablet) {
+    font-size: 14px;
+    line-height: 2.14;
+    letter-spacing: 0.04em;
   }
 }
 .customer__title {
   text-align: center;
-  font-family: 'DM Sans', sans-serif;
-  font-style: normal;
+  font-family: $primary-font-family;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.86;
   color: rgb(0, 0, 0);
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 1.87;
+  }
 }
 
 .customer__slider {
@@ -101,11 +130,18 @@
   position: relative;
   margin-right: 10px;
   margin-bottom: 18px;
-}
-.slider__item::before {
-  content: '';
-  background-repeat: no-repeat;
-  background-position: center center;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+  &::before {
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 14px;
+  }
 }
 
 .icon-slider::before {
@@ -123,6 +159,14 @@
   position: relative;
   margin-right: 18px;
   margin-top: 30px;
+  &::after {
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-top: 35px;
+  }
 }
 .icon-home::after {
   background-image: url(../images/icons/icon-home.svg);
@@ -130,11 +174,7 @@
   width: 12px;
   height: 12px;
 }
-.marker__item::after {
-  content: '';
-  background-repeat: no-repeat;
-  background-position: center center;
-}
+
 .icon-marker::after {
   background-image: url(../images/icons/icon-ellipse-12px.svg);
   position: absolute;
