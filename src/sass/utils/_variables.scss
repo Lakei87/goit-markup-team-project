@@ -1,7 +1,37 @@
 // Шрифты
 $primary-font-family: 'DM Sans', sans-serif;
-$secondary-font-family: 'Titan One', cursive;
+$secondary-font-family: 'Titan One', sans-serif;
 
+// Основные цвета на странице
+$primary-color: #d41443;
+$primary-white-color: #fff;
+
+// Цвет текста
+$font-color: #000;
+$font-color-secondary: #907e82;
+$subtitle-color: #ffa5ba;
+
+// Фон для секций
+$header-bg-color: #ffb8ca;
+$section-bg-primary: #fff5f6;
+$section-bg-secondary: #fafafa;
+
+// Фон для элементов секций
+$bg-color-first: #ffb8ca;
+$bg-color-second: #f0d1a5;
+$bg-color-third: #c2e297;
+
+// Фон для мобильного меню
+$mobile-menu-bg: #e17992;
+
+// Фон для иконок социальных сетей
+$socials-bg: #fea5bb;
+
+// Фон для событий
+$event-btn-primary: #ecebeb;
+$event-btn-secondary: #c7133e;
+
+//=======================Переменный, которые после согласования, будут удалены
 // цвет героя, фон ice cream и описания к секциям
 $theme-color: #ffa5ba;
 // фон для мобильного меню
