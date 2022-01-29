@@ -1,0 +1,11 @@
+.button {
+  margin: 0;
+  padding: 0;
+  border: 1px solid transparent;
+
+  cursor: pointer;
+}
+
+.button--primary {
+  @include button--primary;
+}
