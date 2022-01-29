@@ -43,7 +43,7 @@
   line-height: 1.13;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: #d41443;
+  color: $primary-color;
 }
 
 .section__title--hidden {
@@ -65,5 +65,5 @@
   line-height: 1.13;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: #ffa5ba;
+  color: $subtitle-color;
 }
