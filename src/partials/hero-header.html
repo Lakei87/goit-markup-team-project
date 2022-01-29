@@ -1,0 +1,68 @@
+<section class="hero-header">
+ <div class="container">
+
+  <header class="header">
+
+   <!-- Логотип -->
+   <div class="header__position-logo">
+        <a href="./index.html" class="logo"><img src="./images/hero/logo.png" alt="logo"></a>
+   </div>
+
+    <!-- Бургер для мобильного меню (работает с помошюью скрипта "menu.js")-->
+    <button tupe="button" class="burger" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+      <use class="burger__menu" href="./images/icons/sprite.svg#icon-burger"></use>
+      <use class="burger__close" href="./images/icons/sprite.svg#icon-close"></use>
+    </svg>
+    </button>
+
+    <!-- Навигация -->
+    <nav>
+    <ul class="header-menu">
+     <li><a class="header-menu__link header-menu__link--current" href="./index.html">Home</a></li>
+     <li><a class="header-menu__link" href="/">About us</a></li>
+     <li><a class="header-menu__link" href="/">How it&#x000B4;s made?</a></li>
+     <li><a class="header-menu__link" href="/">Our products</a></li>
+     <li><a class="header-menu__link" href="/">Contact</a></li>
+    </ul>
+   </nav>
+
+   <!-- Нопка купить в хедере -->
+  <button tupe="button" class="сall-to-action">Buy now</button>
+
+  </header>
+
+
+
+  <!-- Герой -->
+  <section class="hero">
+
+    <div class="hero__box">
+      <h1 class="hero__text">ice cream<br>made with<br><span class="red-big-text">passion</span></h1>
+      <button type="button" class="button hero__button--red">Products</button>
+      <button type="button" class="button hero__button--white">How it’s made?</button>
+    </div>
+ 
+  </section>
+
+  <img class="hero__icecream" src="./images/hero/icecream-desktop.png" alt="Мороженное">
+  <img class="hero__girl" src="./images/hero/tasty-desktop.png" alt="Девушка ест мороженное">
+
+  <!-- Молоко и текст бокс -->
+  <div class="hero__milk-box">
+
+    <img class="milk-box__milk" src="./images/hero/milk-desktop.png" alt="Кувшин с молоком">
+
+    <div class="milk-box__box">
+      <p class="milk-box__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
+      <button tupe="button" class="milk-box__button">
+        <svg class="milk-box__arrow" width="9" height="8" aria-label="Читать далее">
+          <use href="./images/icons/sprite.svg#icon-arrow"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+
+ </div>
+</section>
