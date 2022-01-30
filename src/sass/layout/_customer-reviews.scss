@@ -1,4 +1,4 @@
-.customer-reviews {
+.customer__list {
   background-color: $primary-white-color;
   text-align: center;
   display: flex;
@@ -27,6 +27,8 @@
   margin-bottom: 52px;
   overflow: hidden;
   z-index: 1;
+  display: flex;
+  justify-content: center;
 
   &::before {
     content: '';
@@ -64,17 +66,18 @@
   position: absolute;
   width: 54px;
   height: 40px;
-  top: 26px;
-  left: 69px;
-  @media screen and (min-width: $tablet) {
-    top: 28px;
-    left: 40px;
+  top: 28px;
+  left: 132px;
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    top: 29px;
+    left: 119px;
   }
   @media screen and (min-width: $desktop) {
     top: 31px;
-    left: 50px;
+    left: 70px;
   }
 }
+
 .customer__text {
   position: inherit;
   text-align: center;
@@ -99,7 +102,7 @@
     transform: translate(-50%, -50%);
     z-index: -1;
     @media screen and (min-width: $tablet) and (max-width: 1279px) {
-      width: 108%;
+      width: 113%;
       top: 80%;
       background: repeating-linear-gradient(
         rgba(225, 225, 225) 0px,
@@ -108,22 +111,26 @@
       );
     }
     @media screen and (min-width: $desktop) {
-      width: 108%;
+      width: 102%;
       top: 100%;
     }
   }
-
-  @media screen and (min-width: $tablet) {
+  @media screen and (max-width: 767px) {
+    max-width: 157px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
     font-size: 14px;
     line-height: 2.14;
     letter-spacing: 0.04em;
+    max-width: 460px;
   }
   @media screen and (min-width: $desktop) {
     font-size: 16px;
     line-height: 1.87;
   }
 }
-.customer__subtitle {
+
+.customer__title {
   text-align: center;
   font-family: $primary-font-family;
   font-weight: 500;
@@ -174,41 +181,19 @@
   height: 4px;
 }
 
-.customer__marker {
-  display: flex;
-  justify-content: center;
-}
-.marker__item {
-  position: relative;
-  margin-right: 18px;
-  margin-top: 30px;
-  &::after {
-    content: '';
-    background-repeat: no-repeat;
-    background-position: center center;
-  }
-  @media screen and (min-width: $tablet) {
-    margin-top: 35px;
-  }
-}
-.icon-home::after {
-  position: absolute;
-  background-image: url(../images/icons/icon-home.svg);
-  width: 12px;
-  height: 12px;
-}
-
-.icon-marker::after {
-  position: absolute;
-  background-image: url(../images/icons/icon-ellipse-12px.svg);
-  width: 12px;
-  height: 12px;
-}
-
+// Slider
 .swiper {
-  width: 500px;
-  height: 500px;
-  background-color: skyblue;
+  width: 280px;
+  height: 570px;
+  background-color: $primary-white-color;
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: 620px;
+    height: 382px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 100%;
+    height: 350px;
+  }
 }
 
 .swiper-slide {
@@ -231,9 +216,9 @@
   align-items: center;
 }
 
-.swiper-slide img {
+.swiper-slide {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  // object-fit: cover;
 }
