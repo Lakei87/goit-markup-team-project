@@ -97,10 +97,10 @@
     content: url('../images/products/icecream-mobile.png');
   }
   &:nth-child(2)::before {
-    content: url('/src/images/products/coffee-mobile.png');
+    content: url('../images/products/coffee-mobile.png');
   }
   &:last-child::before {
-    content: url('../src/images/products/milkshake-mobile.png');
+    content: url('../images/products/milkshake-mobile.png');
   }
 }
 .products__img {
