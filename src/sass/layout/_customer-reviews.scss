@@ -1,0 +1,224 @@
+.customer__list {
+  background-color: $primary-white-color;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+}
+.customer__thumb {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 29px;
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 19px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 15px;
+  }
+}
+.customer__content {
+  position: relative;
+  background-color: $section-bg-secondary;
+  padding-top: 43px;
+  padding-left: 66px;
+  padding-right: 66px;
+  padding-bottom: 26px;
+  color: $font-color;
+  width: 280px;
+  margin-bottom: 52px;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  @media screen and (min-width: $mobile) {
+    font-family: $primary-font-family;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 2.58;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    width: 620px;
+    padding-top: 47px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-bottom: 34px;
+    margin-bottom: 24px;
+
+    background-color: rgba(250, 250, 250, 0.4);
+  }
+  @media screen and (min-width: $desktop) {
+    width: 926px;
+    padding-top: 47px;
+    padding-left: 89px;
+    padding-right: 89px;
+    padding-bottom: 39px;
+    margin-bottom: 15px;
+  }
+}
+
+.icon-quotes::before {
+  background-image: url(../images/icons/icon-quotes.svg);
+  position: absolute;
+  width: 54px;
+  height: 40px;
+  top: 28px;
+  left: 132px;
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    top: 29px;
+    left: 119px;
+  }
+  @media screen and (min-width: $desktop) {
+    top: 31px;
+    left: 70px;
+  }
+}
+
+.customer__text {
+  position: inherit;
+  text-align: center;
+  font-family: $primary-font-family;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2.55;
+  color: $font-color;
+
+  &::after {
+    content: '';
+    background: repeating-linear-gradient(
+      rgba(225, 225, 225) 0px,
+      rgb(250, 250, 250) 2px,
+      rgb(250, 250, 250) 31px
+    );
+    width: 116%;
+    height: 100%;
+    position: absolute;
+    top: 61%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    @media screen and (min-width: $tablet) and (max-width: 1279px) {
+      width: 113%;
+      top: 80%;
+      background: repeating-linear-gradient(
+        rgba(225, 225, 225) 0px,
+        rgb(250, 250, 250, 0.4) 2px,
+        rgb(250, 250, 250, 0.4) 31px
+      );
+    }
+    @media screen and (min-width: $desktop) {
+      width: 102%;
+      top: 100%;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    max-width: 157px;
+  }
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
+    font-size: 14px;
+    line-height: 2.14;
+    letter-spacing: 0.04em;
+    max-width: 460px;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 16px;
+    line-height: 1.87;
+  }
+}
+
+.customer__title {
+  text-align: center;
+  font-family: $primary-font-family;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.86;
+  color: $font-color;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    line-height: 1.87;
+  }
+  @media screen and (min-width: $desktop) {
+    font-size: 20px;
+    line-height: 1.85;
+  }
+}
+
+.customer__slider {
+  display: flex;
+  justify-content: center;
+}
+
+.slider__item {
+  position: relative;
+  margin-right: 10px;
+  margin-bottom: 18px;
+
+  &:last-child {
+    margin-right: 0px;
+  }
+  &::before {
+    content: '';
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 14px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 15px;
+  }
+}
+
+.icon-slider::before {
+  background-image: url(../images/icons/icon-ellipse-4px.svg);
+  position: absolute;
+  width: 4px;
+  height: 4px;
+}
+
+// Slider
+.swiper {
+  width: 280px;
+  height: 570px;
+  background-color: $primary-white-color;
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: 620px;
+    height: 382px;
+  }
+  @media screen and (min-width: $desktop) {
+    width: 100%;
+    height: 350px;
+  }
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide {
+  display: block;
+  width: 100%;
+  height: 100%;
+  // object-fit: cover;
+}
