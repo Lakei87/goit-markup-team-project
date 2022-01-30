@@ -1,26 +1,41 @@
 .about{
     width: 100%;
     height: 100%;
-    background-color: $bg-color-primery;
+    background-color: $section-bg-primary;
     // background-image: url(../images/about/milkbg-desktop.png);
-    @media screen  and (min-width:$mobile){
-        width: 480px;
-        // background-image: url(../images/about/milkbg-desktop.png);
-        // background-repeat: no-repeat;
-        
-    } 
-    @media screen  and (min-width:$tablet){
-        width: 768px;
-        
-    } 
+    @media screen  and (max-width:767px){
+        background-image: url(../images/about/milkbg-mobile.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position-y: 647px;
+        @media (min-device-pixel-ratio: 2),
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx){
+                background-image: 
+        url(../images/about/milkbg-mobile@2x.png);
+            }
+    }
+    @media screen  and (min-width:355px) and (max-width:767px){
+        background-position-y: 600px;
+    }
     @media screen and (min-width: $desktop) {
-        width: 1280px;
+        // width: 1280px;
         background-image: url(../images/about/milkbg-desktop.png);
         background-repeat: no-repeat;
         background-position: bottom;
-      }
+        background-size: contain;
+      
+      @media (min-device-pixel-ratio: 2),
+            (-webkit-min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx){
+            background-image: url(../images/about/milkbg-desktop@2x.png);
+            }
 }
-.about_label{
+}
+.about__label{
+    
     font-family: $secondary-font-family;
     font-size: 18px;
     line-height: 1.17;
@@ -29,7 +44,7 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
 
-    color: $theme-color;
+    color: $subtitle-color;
     @media screen  and (min-width:$tablet){
         font-size: 26px;
         line-height: 1.15;
@@ -41,7 +56,7 @@
       }
     
 }
-.about_title{
+.about__title{
     margin-top: 15px;
     margin-bottom: 26px;
     font-family: $secondary-font-family;
@@ -51,7 +66,7 @@
     letter-spacing: 0.06em;
     text-transform: uppercase;
 
-    color: $accent-color;
+    color: $primary-color;
     @media screen  and (min-width:$tablet){
         margin-top: 16px;
         margin-bottom: 50px;
@@ -68,17 +83,12 @@
       }
     
 }
-.about_product{
-    
-    // display: flex;
-    
-}
-.about_list{
+.about__list{
     @media screen  and (min-width:$tablet){
         display: flex;
     }
 }
-.about_milk{
+.about__milk{
     display: block;
     min-width: 280px;
     min-height: 279px; 
@@ -93,7 +103,7 @@
         
     } 
 }
-.about_box{
+.about__box{
     padding-left: 30px;
     padding-right: 30px;
     margin-left: auto;
@@ -101,6 +111,8 @@
     text-align: center;
     @media screen  and (min-width:$tablet){
         text-align: initial;
+        padding-left: 17px;
+        padding-right: 0;
     }
     @media screen  and (min-width:$desktop){
         padding-left: 0;
@@ -109,7 +121,7 @@
         
     } 
 }
-.about_content{
+.about__content{
     margin-top: 46px;
    
     font-family: $primary-font-family;
@@ -118,9 +130,9 @@
     font-size: 12px;
     text-align: initial;
     line-height: 1.58;
-    letter-spacing: 0.04em;
+    // letter-spacing: 0.04em;
 
-    color: $text-third;
+    color: $font-color;
     @media screen  and (min-width:$tablet){
         margin-top: 50px;
         font-size: 14px;
@@ -132,7 +144,7 @@
         letter-spacing: 0.04em;  
     } 
 }
-.about_text{
+.about__text{
     margin-top: 32px;
     margin-bottom: 17px;
 
@@ -144,7 +156,7 @@
 
     letter-spacing: 0.04em;
 
-    color: $text-primery;
+    color: $font-color-secondary;
     @media screen  and (min-width:$tablet){
         margin-bottom: 62px;
 
@@ -158,7 +170,15 @@
         letter-spacing: 0.04em;  
     } 
 }
-.about_button {
+.about__text-span{
+    display: block;
+    margin-top: 15px;
+    @media screen and (min-width: $desktop) {
+        margin-top: 30px;
+    }
+
+}
+.about__button {
     width: 176px;
     height: 44px;
 
@@ -168,13 +188,21 @@
     line-height: 1.28;
     
 
-    fill:$accent-color;
-    color: $accent-color;
-    background: $text-secondary;
+    fill:$primary-color;
+    color: $primary-color;
+    background: $primary-white-color;
     border-radius: 22px;
     border: transparent;
-    cursor: pointer;
+    
+    cursor: url(../images/icecream.png),pointer;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+    &:hover,
+    &:focus{
+        background-color: $event-btn-primary;
+        color: $primary-color;
+}
     @media screen  and (min-width:$tablet){
         font-size: 16px;
         line-height: 1.31;
@@ -185,7 +213,7 @@
     } 
     
 }
-.about_icon{
+.about__icon{
     margin-left: 14px;
     width: 8px;
     height: 8px;
@@ -205,25 +233,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 245, 246, 0.7);
     overflow: scroll;
 
     opacity: 1;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    @media screen and (max-width:767px){
-        padding-left: 15px;
-        padding-top: 93px;  
-        padding-right: 15px;
-        padding-bottom: 94px;
-        z-index: 2;
-    }
-    @media screen and (min-width:768px){
-        padding-left: 159px;
-        padding-top: 208px;  
-        padding-right: 159px;
-        padding-bottom: 207px;
-        z-index: 2;
-    }
+   
 }
 .backdrop.is-hidden{
     opacity: 0;
@@ -231,9 +246,10 @@
     visibility: hidden;
 }
 .modal{
-    // width: 450px;
-    // height: 609px;
-    background-color: rgb(245, 38, 210);
+    width: 500px;
+    
+    text-align: center;
+    background-color: $header-bg-color;
     
     
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -243,7 +259,11 @@
         left: 50%;
         
         transform: translate(-50%, -50%);
+        @media screen and (max-width:480px) {
+            width: 200px;
+        }
         @media screen and (min-width:480px) {
+            
             position: relative;
            
      
@@ -267,34 +287,51 @@
         left: 50%;
         
         transform: translate(-50%, -50%);
-        min-width: 300px;
-        min-height: 300px;
+        
     }
     
 }
+.modal__text{
+    padding: 30px;
+
+    font-family: $primary-font-family;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 1.58;
+    text-align: initial;
+
+    letter-spacing: 0.04em;
+
+    color: $font-color-secondary; 
+}
 .modal__button{
-    position: absolute;
-    top: 8px;
-    right: 8px;
+    width: 176px;
+    height: 44px;
+    margin-bottom: 10px;
 
-    transition:  fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    font-family: $primary-font-family;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.28;
 
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    
-    margin: 0;
+    fill:$primary-color;
+    color: $primary-color;
+    background: $primary-white-color;
+    border-radius: 22px;
+    border: transparent;
 
-    width: 30px;
-    height: 30px;
-    background-color: rgb(247, 88, 15);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    background-color: $primary-white-color;
     border: 1px solid rgba(0, 0, 0, 0.1);
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 1;
+    
+    cursor: url(../images/icecream.png),pointer;
+    
     &:hover,
     &:focus{
-      fill: green;
+        background-color: $event-btn-primary;
+        color: $primary-color;
 }
     @media screen and (max-width:767px) {
         // top: 101px;
