@@ -1,4 +1,21 @@
 .contact{
+
+        @media screen and (max-width: $mobile){
+            padding-top:86px;
+            padding-bottom: 53px;
+        } 
+
+
+        @media screen and (min-width: $tablet){
+            padding-top:119px;
+            padding-bottom: 64px;
+        } 
+
+        @media screen and (min-width: $desktop){
+        padding-top:132px;
+        padding-bottom: 40px;
+        }   
+
         @media screen and (min-width: 320px) and (max-width: 767px) {
             background: linear-gradient(to top, #fff5f6 91%, white 9%);
         }
@@ -13,7 +30,7 @@
 }
 
 
-@media screen and (min-width: 1280px){
+@media screen and (min-width: $desktop){
     .locations{
     background-image: url(../images/contacts/bg-desktop.png);
     background-repeat: no-repeat;
@@ -21,10 +38,10 @@
     }
 }
 
-@media screen and (min-width: 1280px)and (min-device-pixel-ratio: 2),
-screen and (min-width: 1280px)and (-webkit-min-device-pixel-ratio: 2),
-screen and (min-width: 1280px)and (min-resolution: 192dpi),
-screen and (min-width: 1280px)and (min-resolution: 2dppx) {
+@media screen and (min-width: $desktop)and (min-device-pixel-ratio: 2),
+screen and (min-width: $desktop)and (-webkit-min-device-pixel-ratio: 2),
+screen and (min-width: $desktop)and (min-resolution: 192dpi),
+screen and (min-width: $desktop)and (min-resolution: 2dppx) {
     .locations {
         background-image: url("../images/contacts/bg-desktop@2x.png");
     }
@@ -71,7 +88,7 @@ screen and (min-width: 1280px)and (min-resolution: 2dppx) {
     display: block;
     max-width: 100%;
     height: 427px;
-    background: #FFFFFF;
+    background: $primary-white-color;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
     margin-bottom: 20px;
@@ -117,8 +134,8 @@ screen and (min-width: 1280px)and (min-resolution: 2dppx) {
         font-size: 12px;
         line-height: 135%;
         max-width: 80px;
-        background-color: #F0D1A5;
-        color: #FFFFFF;
+        background-color: $bg-color-second;
+        color: $primary-white-color;
         align-items: center;
         text-align: center;
         letter-spacing: 0.04em;
@@ -130,8 +147,8 @@ screen and (min-width: 1280px)and (min-resolution: 2dppx) {
         font-size: 12px;
         line-height: 135%;
         max-width: 130px;
-        background-color: #C2E297;
-        color: #FFFFFF;
+        background-color: $bg-color-third;
+        color: $primary-white-color;
         align-items: center;
         text-align: center;
         letter-spacing: 0.04em;
@@ -183,7 +200,7 @@ screen and (min-width: 1280px)and (min-resolution: 2dppx) {
         font-size: 12px;
         line-height: 186%;
         letter-spacing: 0.04em;
-        color: #000000;
+        color: $font-color;
 
     }
 
@@ -247,7 +264,7 @@ screen and (min-width: 1280px)and (min-resolution: 2dppx) {
         font-size: 12px;
         line-height: 186%;
         letter-spacing: .04em;
-        color: #000;
+        color: $font-color;
         margin-top: 10px;
     }
 
@@ -259,7 +276,7 @@ screen and (min-width: 1280px)and (min-resolution: 2dppx) {
     font-weight: 500;
     font-size: 12px;
     line-height: 186%;
-    color: #FFA5BA;
+    color: $subtitle-color;
     }
 }
 
@@ -314,10 +331,10 @@ screen and (min-width: 1280px)and (min-resolution: 2dppx) {
     margin-bottom: 43px;
 
     .contacts__tel{
-        font-family: DM Sans;
+        font-family: $primary-font-family;
         font-style: normal;
         font-weight: 500;
-        color: #907E82;
+        color: $font-color-secondary;
     }
 
     @media (max-width:$mobile){
@@ -328,10 +345,10 @@ screen and (min-width: 1280px)and (min-resolution: 2dppx) {
     }
 
     .contacts__email{
-        font-family: DM Sans;
+        font-family: $primary-font-family;
         font-style: normal;
         font-weight: 500;
-        color: #907E82;
+        color: $font-color-secondary;
     }
 
     @media (max-width:$mobile){
@@ -412,7 +429,7 @@ screen and (min-width: 1280px)and (min-resolution: 2dppx) {
         align-items: center;
         padding: 0px;
         margin-bottom: 10px;
-        color: #FFFFFF;
+        color: $primary-white-color;
         background: #D41342;
         border-radius: 22px;
         cursor: pointer; 
@@ -422,7 +439,7 @@ screen and (min-width: 1280px)and (min-resolution: 2dppx) {
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
         .contacts__span{
-        font-family: DM Sans;
+        font-family: $primary-font-family;
         font-style: normal;
         font-weight: bold;
         font-size: 16px;
@@ -432,7 +449,7 @@ screen and (min-width: 1280px)and (min-resolution: 2dppx) {
 
         .contacts__icon{
             margin-left: 8px;
-            fill:  #FFFFFF;
+            fill:  $primary-white-color;
         }
     }
 
