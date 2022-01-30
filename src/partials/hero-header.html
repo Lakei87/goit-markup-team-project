@@ -1,68 +1,118 @@
 <section class="hero-header">
  <div class="container">
+		
+	<header class="header">
+	
+		<!-- Логотип -->
+		<div class="header__position-logo">
+			<a href="./index.html" class="logo">
+				<img 
+				srcset="./images/hero/logo.png 1x, ./images/hero/logo@2x.png 2x"
+				src="./images/hero/logo.png" alt="logo">
+			</a>
+		</div>
 
-  <header class="header">
+		<!-- (работает с помошюью скрипта "menu.js") -->
+		<div class="backdrop-menu">
+			<div class="menu-container" id="menu-container" data-menu>
 
-   <!-- Логотип -->
-   <div class="header__position-logo">
-        <a href="./index.html" class="logo"><img src="./images/hero/logo.png" alt="logo"></a>
+
+				<!-- Навигация -->
+				<nav>
+					<ul class="header-menu">
+						<li><a class="header-menu__link header-menu__link--current" href="./index.html">Home</a></li>
+						<li><a class="header-menu__link" href="/">About us</a></li>
+						<li><a class="header-menu__link" href="/">How it&#x000B4;s made?</a></li>
+						<li><a class="header-menu__link" href="/">Our products</a></li>
+						<li><a class="header-menu__link" href="/">Contact</a></li>
+					</ul>
+				</nav>
+
+
+
+				<!-- Бургер для мобильного меню (работает с помошюью скрипта "menu.js")-->
+				<button tupe="button" class="header-menu__burger" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+					<svg aria-label="Переключатель мобильного меню">
+						<use width="20" height="12" class="burger__menu" href="./images/icons/sprite.svg#icon-burger"></use>
+						<use width="14" height="14" class="burger__close" href="./images/icons/sprite.svg#icon-close"></use>
+					</svg>
+				</button>
+
+
+			
+				<!-- Нопка купить в хедере -->
+				<button tupe="button" class="header-menu__button">Buy now
+					<svg width="6" height="10" class="button__icon-corner">
+						<use href="./images/icons/sprite.svg#icon-corner"></use>
+					</svg>
+				</button>
+
+				
+			</div>
+		</div>
+	
+	</header>
+	
+	
+	
+	<!-- Герой -->
+	<section class="hero">
+	
+		<div class="hero__box">
+			<h1 class="hero__text">ice cream<br>made with<br><span class="red-big-text">passion</span></h1>
+			<button type="button" class="button hero__button--red">Products</button>
+			<button type="button" class="button hero__button--white">How it’s made?</button>
+		</div>
+
+  <div class="hero__advantages">
+   <div class="advantages__box">
+   <p class="number">16</p>
+   <p class="description">cafes</p>
    </div>
-
-    <!-- Бургер для мобильного меню (работает с помошюью скрипта "menu.js")-->
-    <button tupe="button" class="burger" aria-expanded="false" aria-controls="menu-container" data-menu-button>
-    <svg width="40" height="40" aria-label="Переключатель мобильного меню">
-      <use class="burger__menu" href="./images/icons/sprite.svg#icon-burger"></use>
-      <use class="burger__close" href="./images/icons/sprite.svg#icon-close"></use>
-    </svg>
-    </button>
-
-    <!-- Навигация -->
-    <nav>
-    <ul class="header-menu">
-     <li><a class="header-menu__link header-menu__link--current" href="./index.html">Home</a></li>
-     <li><a class="header-menu__link" href="/">About us</a></li>
-     <li><a class="header-menu__link" href="/">How it&#x000B4;s made?</a></li>
-     <li><a class="header-menu__link" href="/">Our products</a></li>
-     <li><a class="header-menu__link" href="/">Contact</a></li>
-    </ul>
-   </nav>
-
-   <!-- Нопка купить в хедере -->
-  <button tupe="button" class="сall-to-action">Buy now</button>
-
-  </header>
-
-
-
-  <!-- Герой -->
-  <section class="hero">
-
-    <div class="hero__box">
-      <h1 class="hero__text">ice cream<br>made with<br><span class="red-big-text">passion</span></h1>
-      <button type="button" class="button hero__button--red">Products</button>
-      <button type="button" class="button hero__button--white">How it’s made?</button>
-    </div>
- 
-  </section>
-
-  <img class="hero__icecream" src="./images/hero/icecream-desktop.png" alt="Мороженное">
-  <img class="hero__girl" src="./images/hero/tasty-desktop.png" alt="Девушка ест мороженное">
-
-  <!-- Молоко и текст бокс -->
-  <div class="hero__milk-box">
-
-    <img class="milk-box__milk" src="./images/hero/milk-desktop.png" alt="Кувшин с молоком">
-
-    <div class="milk-box__box">
-      <p class="milk-box__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-      <button tupe="button" class="milk-box__button">
-        <svg class="milk-box__arrow" width="9" height="8" aria-label="Читать далее">
-          <use href="./images/icons/sprite.svg#icon-arrow"></use>
-        </svg>
-      </button>
-    </div>
+   <div class="advantages__box">
+   <p class="number">23</p>
+   <p class="description">food trucks</p>
+   </div>
   </div>
+	
+	</section>
+	
 
 
- </div>
-</section>
+	<!-- <img class="hero__girl" 
+	srcset="./images/hero/tasty-desktop.png 1x, ./images/hero/tasty-desktop@2x.png 2x"
+	src="./images/hero/tasty-desktop.png" alt="Девушка ест мороженное"> -->
+
+	<img class="hero__girl" 
+		srcset="./images/hero/tasty-tablet-168.png 168w, ./images/hero/tasty-desktop-293.png 293w"
+		sizes="(min-width: 1280px) 293px, (min-width: 768px) 168px"
+		src="./images/hero/tasty-desktop.png" alt="Девушка ест мороженное">
+
+
+	<!-- Молоко и текст бокс -->
+	<div class="hero__milk-box">
+
+		<!-- <img class="milk-box__milk" 
+		srcset="./images/hero/milk-desktop.png 1x, ./images/hero/milk-desktop@2x.png 2x"
+		src="./images/hero/milk-desktop.png" alt="Кувшин с молоком"> -->
+
+				<img class="milk-box__milk" 
+		srcset="./images/hero/milk-tablet-124.png 124w, ./images/hero/milk-desktop-188.png 188w"
+		sizes="(min-width: 1280px) 188px, (min-width: 768px) 124px"
+					src="./images/hero/milk-desktop.png" alt="Кувшин с молоком">
+	
+		<div class="milk-box__box">
+			<p class="milk-box__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+				incididunt ut labore et</p>
+			<button tupe="button" class="milk-box__button">
+				<svg class="milk-box__arrow" width="9" height="8" aria-label="Читать далее">
+					<use href="./images/icons/sprite.svg#icon-arrow"></use>
+				</svg>
+			</button>
+		</div>
+	</div>
+	
+	
+
+	</div>
+	</section>
