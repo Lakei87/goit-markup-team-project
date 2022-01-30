@@ -92,6 +92,17 @@
     padding: 163px 44px 50px 44px;
   }
 }
+.products__item {
+  &:first-child::before {
+    content: url('../images/products/icecream-mobile.png');
+  }
+  &:nth-child(2)::before {
+    content: url('/src/images/products/coffee-mobile.png');
+  }
+  &:last-child::before {
+    content: url('../src/images/products/milkshake-mobile.png');
+  }
+}
 .products__img {
   @media screen and (max-width: 767px) {
     top: -130px;
@@ -184,6 +195,7 @@
 }
 .products__btn {
   fill: $event-btn-secondary;
+  background-color: $primary-white-color;
   width: 40px;
   height: 40px;
   border-radius: 50%;
