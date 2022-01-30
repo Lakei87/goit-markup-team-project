@@ -7,5 +7,9 @@
 }
 
 .button--primary {
-  @include button--primary;
+  @include btn-primary;
+}
+
+.button--secondary {
+  @include btn-circle;
 }
