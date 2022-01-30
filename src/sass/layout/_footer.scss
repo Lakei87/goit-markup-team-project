@@ -1,5 +1,5 @@
 .footer {
-  background: #fff5f6;
+  background: $section-bg-primary;
   position: relative;
 
   &::before {
@@ -109,7 +109,7 @@
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background-color: #fea5bb;
+    background-color: $socials-bg;
 
     &:hover,
     &:focus {
@@ -124,7 +124,8 @@
     font-size: 12px;
     line-height: 1.8;
 
-    color: #d41443;
+    color: $primary-color;
+
     @media screen and (min-width: $tablet) {
       font-size: 14px;
       line-height: 1.86;
@@ -136,13 +137,13 @@
     }
     &--black {
       font-weight: bold;
-      color: #000;
+      color: $font-color;
     }
   }
 }
 
 .footer-social__svg {
-  fill: #fff;
+  fill: $primary-white-color;
 }
 .footer-copyright {
   padding: 22px 0 25px 0;
@@ -161,7 +162,7 @@
     font-weight: bold;
     font-size: 14px;
     line-height: 1.5;
-    color: #907e82;
+    color: $text-primery;
     @media screen and (min-width: $desktop) {
       font-size: 14px;
       line-height: 1.86;
