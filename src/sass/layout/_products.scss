@@ -1,5 +1,5 @@
 .products {
-  background-color: $text-secondary;
+  background-color: $primary-white-color;
 }
 .products__label {
   @media screen and(max-width:767px) {
@@ -23,7 +23,7 @@
 
   text-align: center;
   text-transform: uppercase;
-  color: $theme-color;
+  color: $primary-white-color;
 }
 
 .products__header {
@@ -54,7 +54,7 @@
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
-  color: $accent-color;
+  color: $primary-color;
 }
 .products__list {
   @media screen and (min-width: $tablet) {
@@ -125,7 +125,7 @@
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: $primary-white-color;
 }
 
 // .products__title::after {
@@ -192,10 +192,10 @@
   margin: 0 auto;
 }
 .ice-cream {
-  background-color: $theme-color;
+  background-color: $bg-color-first;
 }
 .ice-coffee {
-  background-color: $bg-color-secondary;
+  background-color: $bg-color-second;
 }
 .milkshakes {
   background-color: $bg-color-third;
