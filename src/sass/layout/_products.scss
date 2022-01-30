@@ -1,5 +1,5 @@
 .products {
-  background-color: $text-secondary;
+  background-color: $primary-white-color;
 }
 .products__label {
   @media screen and(max-width:767px) {
@@ -23,7 +23,7 @@
 
   text-align: center;
   text-transform: uppercase;
-  color: $theme-color;
+  color: $primary-white-color;
 }
 
 .products__header {
@@ -54,7 +54,7 @@
   font-weight: normal;
   text-align: center;
   text-transform: uppercase;
-  color: $accent-color;
+  color: $primary-color;
 }
 .products__list {
   @media screen and (min-width: $tablet) {
@@ -113,25 +113,35 @@
   left: 0;
   right: 50%;
 }
-.products__title::after {
-  position: absolute;
-
-  content: '';
+.circle-box {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.circle {
+  &:not(:last-child) {
+    margin-right: 4px;
+  }
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background-color: #fff;
+  background-color: $primary-white-color;
 }
+
+// .products__title::after {
+//   content: '';
+
+// }
 .products__title {
   position: relative;
   @media screen and (max-width: 1279px) {
-    margin-bottom: 66px;
+    margin-bottom: 30px;
 
     font-size: 20px;
     line-height: 1.15;
   }
   @media screen and (min-width: $desktop) {
-    margin-bottom: 70px;
+    margin-bottom: 32px;
 
     font-size: 30px;
     line-height: 34px;
@@ -173,17 +183,19 @@
   letter-spacing: 0.04em;
 }
 .products__btn {
+  fill: $event-btn-secondary;
   width: 40px;
   height: 40px;
   border-radius: 50%;
+  border: none;
   display: block;
   margin: 0 auto;
 }
 .ice-cream {
-  background-color: $theme-color;
+  background-color: $bg-color-first;
 }
 .ice-coffee {
-  background-color: $bg-color-secondary;
+  background-color: $bg-color-second;
 }
 .milkshakes {
   background-color: $bg-color-third;
