@@ -8,7 +8,6 @@
             background-repeat: no-repeat;
             background-size: contain;
             background-position-y: bottom;
-            
             @media (min-device-pixel-ratio: 2),
                 (-webkit-min-device-pixel-ratio: 2),
                 (min-resolution: 192dpi),
@@ -44,7 +43,6 @@
     
     text-align: center;
     letter-spacing: 0.06em;
-    
     @media screen  and (min-width:$tablet){
         margin-top: 16px;
         margin-bottom: 50px;
@@ -55,7 +53,6 @@
     @media screen and (min-width: $desktop) {
         line-height: 1.13;
     }
-    
 }
 .about__item{
     @media screen  and (min-width:$tablet){
@@ -184,7 +181,6 @@
     width: 8px;
     height: 8px;
 }
-
 
 // ============ Модальное окно
 .backdrop{
