@@ -143,8 +143,9 @@
 }
 
 .menu__container {
-  position: relative;
-  margin-left: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
   width: 254px;
   height: 100%;
   padding-top: 60px;
@@ -175,7 +176,7 @@
 }
 
 .menu__backdrop.is-open .menu__container {
-  transform: translateX(-50%);
+  transform: translateX(0);
 }
 
 .menu__button--menu {
@@ -453,13 +454,17 @@
 
   .hero__button--red {
     @extend .hero__button;
-    color: $primary-white-color;
+    a {
+      color: $primary-white-color;
+    }
     background-color: $primary-color;
   }
 
   .hero__button--white {
     @extend .hero__button;
-    color: $primary-color;
+    a {
+      color: $primary-color;
+    }
     background-color: $primary-white-color;
   }
 }
