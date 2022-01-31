@@ -6,7 +6,9 @@
     background: linear-gradient(to bottom, $bg-color-primery 65%, white 35%);
   }
 }
-
+.gallery__title {
+  @include visually-hidden();
+}
 .gallery-container {
   display: grid;
   grid-template-columns: repeat(7, 1fr);
