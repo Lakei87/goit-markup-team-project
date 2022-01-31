@@ -1,12 +1,9 @@
 .customer__list {
   background-color: $primary-white-color;
-  text-align: center;
-  display: flex;
-  justify-content: center;
+  @include flex-centering;
 }
 .customer__thumb {
-  display: flex;
-  justify-content: center;
+  @include flex-centering;
   margin-bottom: 29px;
   @media screen and (min-width: $tablet) {
     margin-bottom: 19px;
@@ -27,13 +24,12 @@
   margin-bottom: 52px;
   overflow: hidden;
   z-index: 1;
-  display: flex;
-  justify-content: center;
+  @include flex-centering;
 
   &::before {
     content: '';
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center;
   }
   @media screen and (min-width: $mobile) {
     font-family: $primary-font-family;
@@ -149,8 +145,7 @@
 }
 
 .customer__slider {
-  display: flex;
-  justify-content: center;
+  @include flex-centering;
 }
 
 .slider__item {
@@ -196,8 +191,6 @@
 }
 
 .swiper-slide {
-  text-align: center;
-  font-size: 18px;
   background: $primary-white-color;
 
   /* Center slide text vertically */
