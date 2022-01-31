@@ -1,3 +1,4 @@
+<!-- ============ Секция about ============ -->
 <section class="about section">
     <div class=" container">
     <article class="about__label">
@@ -7,57 +8,48 @@
         how it&rsquo;s made?
     </h2>
     <ul class="about__list">
-        <li class="about__item">
-            <!-- <div class="about_img"> -->
-                
+        <li class="about__item">             
             <img class="about__milk" 
-            srcset="
-            ./images/about/cow-mobile.png 1x,
-            ./images/about/cow-mobile@2x.png 2x,
-            ./images/about/cow-tablet.png 1x,
-            ./images/about/cow-tablet@2x.png 2x,
-            ./images/about/cow-desktop.png 1x,
-            ./images/about/cow-desktop@2x.png 2x"          
-            src="./images/about/cow-desktop.png" alt="cow" />
-            <!-- </div > -->
+                srcset="
+                ./images/about/cow-mobile.png 1x,
+                ./images/about/cow-mobile@2x.png 2x,
+                ./images/about/cow-tablet.png 1x,
+                ./images/about/cow-tablet@2x.png 2x,
+                ./images/about/cow-desktop.png 1x,
+                ./images/about/cow-desktop@2x.png 2x"          
+                src="./images/about/cow-desktop.png" alt="cow" />
             <div class="about__box">          
-    <p class="about__content">
-        Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.
-    </p>
-    <p class="about__text">
-        Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt. <span class="about__text-span"> Aliquam erat volutpat. Aenean accumsan.</span>
-    </p>
-    <button class="about__button" type="button" data-modal-open>
-        Read more
-        <svg class="about__icon">
-            <use href="./images/icons/sprite.svg#icon-corner"></use>
-        </svg>
-    </button>
-    </div>
-</li>
-</ul>
-
-    </div>
-
-    
+                <p class="about__content">
+                    Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at justo fringilla.
+                </p>
+                <p class="about__text">
+                    Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt. <span class="about__text-span"> Aliquam erat volutpat. Aenean accumsan.</span>
+                </p>
+                <button class="about__button" type="button" data-modal-open>
+                    Read more
+                    <svg class="about__icon">
+                        <use href="./images/icons/sprite.svg#icon-corner"></use>
+                    </svg>
+                </button>
+            </div>
+        </li>
+    </ul>
+    </div>  
 </section>
 
-
+<!-- ============ Модальное окно ============ -->
 <div class="backdrop is-hidden" data-modal>
     <div class="modal">
-        
         <div class="modal__box">
             <p class="modal__text">
                 Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum. Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh, tincidunt.
             </p>
         </div>
         <button class="modal__button" data-modal-close type="button">
-            
             close
         </button>
     </div>
     
-
 <script>
 (() => {
     const refs = {
