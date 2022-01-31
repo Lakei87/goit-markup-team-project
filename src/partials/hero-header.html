@@ -1,4 +1,5 @@
 <section class="hero-header">
+<a name="hero-header"></a>
  <div class="container">
 		
 	<header class="header">
@@ -11,44 +12,32 @@
 				src="./images/hero/logo.png" alt="logo">
 			</a>
 		</div>
+		
+		<div class="header__box">
+			<!-- Навигация -->
+			<nav>
+				<ul class="header__nav">
+					<li><a class="nav__link nav__link--current" href="#hero-header">Home</a></li>
+					<li><a class="nav__link" href="#customer-reviews">About us</a></li>
+					<li><a class="nav__link" href="#about">How it&#x000B4;s made?</a></li>
+					<li><a class="nav__link" href="#products">Our products</a></li>
+					<li><a class="nav__link" href="#contacts">Contact</a></li>
+				</ul>
+			</nav>
 
-		<!-- (работает с помошюью скрипта "menu.js") -->
-		<div class="backdrop-menu">
-			<div class="menu-container" id="menu-container" data-menu>
-
-
-				<!-- Навигация -->
-				<nav>
-					<ul class="header-menu">
-						<li><a class="header-menu__link header-menu__link--current" href="./index.html">Home</a></li>
-						<li><a class="header-menu__link" href="/">About us</a></li>
-						<li><a class="header-menu__link" href="/">How it&#x000B4;s made?</a></li>
-						<li><a class="header-menu__link" href="/">Our products</a></li>
-						<li><a class="header-menu__link" href="/">Contact</a></li>
-					</ul>
-				</nav>
-
-
-
-				<!-- Бургер для мобильного меню (работает с помошюью скрипта "menu.js")-->
-				<button tupe="button" class="header-menu__burger" aria-expanded="false" aria-controls="menu-container" data-menu-button>
-					<svg aria-label="Переключатель мобильного меню">
-						<use width="20" height="12" class="burger__menu" href="./images/icons/sprite.svg#icon-burger"></use>
-						<use width="14" height="14" class="burger__close" href="./images/icons/sprite.svg#icon-close"></use>
-					</svg>
-				</button>
-
-
-			
-				<!-- Нопка купить в хедере -->
-				<button tupe="button" class="header-menu__button">Buy now
-					<svg width="6" height="10" class="button__icon-corner">
-						<use href="./images/icons/sprite.svg#icon-corner"></use>
-					</svg>
-				</button>
-
-				
-			</div>
+			<!-- Бургер для мобильного меню (работает с помошюью скрипта "menu.js")-->
+			<button tupe="button" class="menu__burger" aria-expanded="false" aria-controls="menu__container" data-menu-open>
+				<svg  width="40" height="40" aria-label="Кнопка включения мобильного меню" >
+					<use class="burger__menu" href="./images/icons/sprite.svg#icon-burger-menu"></use>						
+				</svg>
+			</button>
+	
+			<!-- Нопка купить в хедере -->
+			<button tupe="button" class="menu__button" id="menu__container">Buy now
+				<svg width="6" height="10" class="button__icon-corner">
+					<use href="./images/icons/sprite.svg#icon-corner"></use>
+				</svg>
+			</button>
 		</div>
 	
 	</header>
@@ -60,8 +49,8 @@
 	
 		<div class="hero__box">
 			<h1 class="hero__text">ice cream<br>made with<br><span class="red-big-text">passion</span></h1>
-			<button type="button" class="button hero__button--red">Products</button>
-			<button type="button" class="button hero__button--white">How it’s made?</button>
+			<a href="#products"><button type="button" class="button hero__button--red">Products</button></a>
+			<a href="#about"><button type="button" class="button hero__button--white">How it’s made?</button></a>			
 		</div>
 
   <div class="hero__advantages">
@@ -105,14 +94,46 @@
 			<p class="milk-box__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
 				incididunt ut labore et</p>
 			<button tupe="button" class="milk-box__button">
-				<svg class="milk-box__arrow" width="9" height="8" aria-label="Читать далее">
+				<svg class="milk-box__arrow" aria-label="Читать далее">
 					<use href="./images/icons/sprite.svg#icon-arrow"></use>
 				</svg>
 			</button>
 		</div>
 	</div>
+
+
+
+	<!-- (работает с помошюью скрипта "menu.js") -->
+	<div class="menu__backdrop" data-menu>
+
+		<div class="menu__container" id="menu-container">
 	
+			<button tupe="button" class="menu__close" data-menu-close>
+				<svg width="40" height="40" aria-label="Кнопка выключения мобильного меню">
+					<use  class="burger__close" href="./images/icons/sprite.svg#icon-burger-close"></use>
+				</svg>
+			</button>
 	
+			<button tupe="button" class="menu__button--menu">Buy now
+				<svg width="6" height="10" class="button__icon-corner">
+					<use href="./images/icons/sprite.svg#icon-corner"></use>
+				</svg>
+			</button>
+	
+			<nav>
+				<ul class="header__nav--menu">
+					<li><a class="nav__link nav__link--current" href="#hero-header">Home</a></li>
+					<li><a class="nav__link" href="#customer-reviews">About us</a></li>
+					<li><a class="nav__link" href="#about">How it&#x000B4;s made?</a></li>
+					<li><a class="nav__link" href="#products">Our products</a></li>
+					<li><a class="nav__link" href="#contacts">Contact</a></li>
+				</ul>
+			</nav>
+		</div>
+
+
+	</div>
+
 
 	</div>
 	</section>

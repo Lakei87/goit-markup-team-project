@@ -1,3 +1,4 @@
+
 {
   "name": "parcel-project-template",
   "version": "1.1.0",
@@ -6,14 +7,14 @@
   "homepage": "https://Lakei87.github.io/goit-markup-team-project",
   "scripts": {
     "dev": "parcel src/*.html",
-    "build": "parcel build src/*.html--public-url/goit-markup-team-project/"
+    "build": "parcel build src/*.html --public-url /goit-markup-team-project/"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/goitacademy/parcel-project-template.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Alexander Repeta",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
@@ -24,5 +25,6 @@
     "parcel-plugin-nuke-dist": "^1.0.1",
     "posthtml-include": "^1.6.2",
     "sass": "^1.32.8"
-  }
+  },
+  "dependencies": {}
 }

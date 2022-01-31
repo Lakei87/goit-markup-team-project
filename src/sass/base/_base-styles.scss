@@ -1,3 +1,9 @@
+body {
+  &.menu-open {
+    overflow: hidden;
+  }
+}
+
 .container {
   margin-right: auto;
   margin-left: auto;
