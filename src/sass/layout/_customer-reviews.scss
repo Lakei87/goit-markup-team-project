@@ -185,7 +185,7 @@
 .swiper {
   height: 570px;
   background-color: $primary-white-color;
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
     width: 620px;
     height: 382px;
   }
@@ -198,7 +198,7 @@
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: $primary-white-color;
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -219,23 +219,16 @@
   display: block;
   width: 100%;
   height: 100%;
-  // object-fit: cover;
 }
 .swiper-pagination-bullet {
   width: 12px;
   height: 12px;
   text-align: center;
-  //   line-height: 20px;
-  //   font-size: 12px;
-  //   color: #000;
-  //   opacity: 1;
-  //   background: rgba(0, 0, 0, 0.2);
 }
 
 .swiper-pagination-bullet-active {
-  //   color: #fff;
   background-image: url(../images/icons/icon-home.svg);
   background-size: contain;
-  background-color: white;
+  background-color: $primary-white-color;
   background-repeat: no-repeat;
 }
