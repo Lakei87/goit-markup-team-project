@@ -59,10 +59,7 @@
         display: flex;
     }
 }
-.about__milk{
-    display: block;
-    min-width: 280px;
-    min-height: 279px; 
+.about__img{
         @media screen  and (min-width:$tablet){
             min-width: 340px;
             height: 339px;  
