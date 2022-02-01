@@ -196,9 +196,16 @@
   font-size: 16px;
   line-height: 1.3;
 
+  transition: background-color 250ms linear;
+
   .button__icon-corner {
     margin-left: 10px;
     fill: $primary-color;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $event-btn-primary;
   }
 }
 
@@ -209,6 +216,11 @@
 
     &:first-child {
       border-top: 1px solid #e18298;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $subtitle-color;
     }
   }
 
@@ -240,6 +252,8 @@
   font-size: 16px;
   line-height: 1.3;
 
+  transition: background-color 250ms linear;
+
   .button__icon-corner {
     margin-left: 10px;
     fill: $primary-color;
@@ -256,6 +270,11 @@
 
   @media screen and (min-width: $desktop) {
     margin-left: 110px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $event-btn-primary;
   }
 }
 
@@ -468,6 +487,8 @@
     color: $color;
     background-color: $background-color;
     cursor: pointer;
+
+    transition: background-color 250ms linear;
   }
 
   .hero__button--red {
@@ -478,6 +499,11 @@
     @media screen and (min-width: $desktop) {
       @include hero-btn($primary-white-color, $primary-color, 14px, 40px, 0 23px);
     }
+
+    &:hover,
+    &:focus {
+      @include hero-btn($primary-white-color, $event-btn-secondary, 14px, 40px, 0 23px);
+    }
   }
 
   .hero__button--white {
@@ -487,6 +513,11 @@
 
     @media screen and (min-width: $desktop) {
       @include hero-btn($primary-color, $primary-white-color, 14px, 40px, 0 23px);
+    }
+
+    &:hover,
+    &:focus {
+      @include hero-btn($primary-color, $event-btn-primary, 14px, 40px, 0 23px);
     }
   }
 }
