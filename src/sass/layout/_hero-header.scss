@@ -88,9 +88,7 @@
   }
 
   @media screen and (min-width: $desktop) {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    @include flex-centering();
   }
 
   .nav__link {
@@ -125,11 +123,9 @@
 }
 
 .menu__backdrop {
-  display: none;
   z-index: 1;
   position: fixed;
   top: 0;
-  left: 0;
   right: 0;
   width: 100%;
   height: 100vh;
@@ -137,8 +133,11 @@
   overflow-y: scroll;
   // backdrop-filter: blur(20px);
 
+  transform: translateX(100%);
+  transition: transform 500ms linear;
+
   &.is-open {
-    display: block;
+    transform: translateX(0);
   }
 }
 
@@ -146,7 +145,7 @@
   position: absolute;
   top: 0;
   right: 0;
-  width: 254px;
+  width: 250px;
   height: 100%;
   padding-top: 60px;
   background-color: $mobile-menu-bg;
@@ -170,14 +169,11 @@
 
     fill: $primary-white-color;
   }
-
-  transform: translateX(-100%);
-  transition: transform 500ms linear;
 }
 
-.menu__backdrop.is-open .menu__container {
-  transform: translateX(0);
-}
+// .menu__backdrop.is-open .menu__container {
+//   transform: translateX(0);
+// }
 
 .menu__button--menu {
   display: block;
@@ -198,9 +194,16 @@
   font-size: 16px;
   line-height: 1.3;
 
+  transition: background-color 250ms linear;
+
   .button__icon-corner {
     margin-left: 10px;
     fill: $primary-color;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $event-btn-primary;
   }
 }
 
@@ -211,6 +214,11 @@
 
     &:first-child {
       border-top: 1px solid #e18298;
+    }
+
+    &:hover,
+    &:focus {
+      background-color: $subtitle-color;
     }
   }
 
@@ -242,6 +250,8 @@
   font-size: 16px;
   line-height: 1.3;
 
+  transition: background-color 250ms linear;
+
   .button__icon-corner {
     margin-left: 10px;
     fill: $primary-color;
@@ -258,6 +268,11 @@
 
   @media screen and (min-width: $desktop) {
     margin-left: 110px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $event-btn-primary;
   }
 }
 
@@ -333,9 +348,7 @@
     background-color: $primary-white-color;
     border-radius: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-centering();
 
     @media screen and (min-width: $tablet) {
       width: 18px;
@@ -430,9 +443,7 @@
     border: 0;
     border-radius: 40px;
     cursor: pointer;
-
     font-weight: 400;
-
     line-height: 1.3;
 
     @media screen and (max-width: 479px), (min-width: $mobile) {
@@ -452,20 +463,70 @@
     }
   }
 
+  @mixin hero-btn(
+    $color: $primary-white-color,
+    $background-color: $primary-color,
+    $font-size: 8px,
+    $height: 24px,
+    $padding: 0 14px
+  ) {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: 400;
+    font-size: $font-size;
+    line-height: 1.3;
+
+    height: $height;
+    padding: $padding;
+    border-radius: 40px;
+
+    color: $color;
+    background-color: $background-color;
+    cursor: pointer;
+
+    transition: background-color 250ms linear;
+  }
+
   .hero__button--red {
-    @extend .hero__button;
-    a {
-      color: $primary-white-color;
+    @media screen and (max-width: 479px), (min-width: $mobile) {
+      @include hero-btn();
+
+      &:hover,
+      &:focus {
+        @include hero-btn($primary-white-color, $event-btn-secondary);
+      }
     }
-    background-color: $primary-color;
+
+    @media screen and (min-width: $desktop) {
+      @include hero-btn($primary-white-color, $primary-color, 14px, 40px, 0 23px);
+
+      &:hover,
+      &:focus {
+        @include hero-btn($primary-white-color, $event-btn-secondary, 14px, 40px, 0 23px);
+      }
+    }
   }
 
   .hero__button--white {
-    @extend .hero__button;
-    a {
-      color: $primary-color;
+    @media screen and (max-width: 479px), (min-width: $mobile) {
+      @include hero-btn($primary-color, $primary-white-color);
+
+      &:hover,
+      &:focus {
+        @include hero-btn($primary-color, $event-btn-primary);
+      }
     }
-    background-color: $primary-white-color;
+
+    @media screen and (min-width: $desktop) {
+      @include hero-btn($primary-color, $primary-white-color, 14px, 40px, 0 23px);
+
+      &:hover,
+      &:focus {
+        @include hero-btn($primary-color, $event-btn-primary, 14px, 40px, 0 23px);
+      }
+    }
   }
 }
 
@@ -486,32 +547,63 @@
     right: 115px;
   }
 
-  .advantages__box + .advantages__box {
+  // .advantages__box + .advantages__box {
+  //   @media screen and (min-width: $tablet) {
+  //     margin-top: 14px;
+  //   }
+
+  //   @media screen and (min-width: $desktop) {
+  //     margin-top: 18px;
+  //   }
+  // }
+
+  .circle {
     @media screen and (min-width: $tablet) {
-      argin-top: 14px;
+      top: 15px;
+      right: -35px;
+
+      width: 16px;
+      height: 16px;
+      border-radius: 16px;
     }
 
     @media screen and (min-width: $desktop) {
-      margin-top: 18px;
+      top: 28px;
+      right: -60px;
+
+      width: 30px;
+      height: 30px;
+      border-radius: 30px;
     }
+
+    position: relative;
+    background-color: $primary-white-color;
   }
 
   .number {
+    position: relative;
     text-align: right;
     font-family: $secondary-font-family;
     line-height: 1.2;
     letter-spacing: 0.04em;
     text-transform: uppercase;
-
     color: $primary-color;
 
     @media screen and (min-width: $tablet) {
-      font-size: 36px;
+      font-size: 28px;
     }
 
     @media screen and (min-width: $desktop) {
       font-size: 46px;
     }
+  }
+
+  .number__white-circle {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border-radius: 16px;
+    background-color: $primary-white-color;
   }
 
   .description {
