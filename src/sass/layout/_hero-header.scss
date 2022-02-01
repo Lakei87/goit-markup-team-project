@@ -492,30 +492,40 @@
   .hero__button--red {
     @media screen and (max-width: 479px), (min-width: $mobile) {
       @include hero-btn();
+
+      &:hover,
+      &:focus {
+        @include hero-btn($primary-white-color, $event-btn-secondary);
+      }
     }
 
     @media screen and (min-width: $desktop) {
       @include hero-btn($primary-white-color, $primary-color, 14px, 40px, 0 23px);
-    }
 
-    &:hover,
-    &:focus {
-      @include hero-btn($primary-white-color, $event-btn-secondary, 14px, 40px, 0 23px);
+      &:hover,
+      &:focus {
+        @include hero-btn($primary-white-color, $event-btn-secondary, 14px, 40px, 0 23px);
+      }
     }
   }
 
   .hero__button--white {
     @media screen and (max-width: 479px), (min-width: $mobile) {
       @include hero-btn($primary-color, $primary-white-color);
+
+      &:hover,
+      &:focus {
+        @include hero-btn($primary-color, $event-btn-primary);
+      }
     }
 
     @media screen and (min-width: $desktop) {
       @include hero-btn($primary-color, $primary-white-color, 14px, 40px, 0 23px);
-    }
 
-    &:hover,
-    &:focus {
-      @include hero-btn($primary-color, $event-btn-primary, 14px, 40px, 0 23px);
+      &:hover,
+      &:focus {
+        @include hero-btn($primary-color, $event-btn-primary, 14px, 40px, 0 23px);
+      }
     }
   }
 }
