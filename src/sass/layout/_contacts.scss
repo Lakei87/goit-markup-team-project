@@ -1,4 +1,4 @@
-.section-contacts{
+.contact{
 
         @media screen and (max-width: $mobile){
             padding-top:86px;
@@ -98,7 +98,6 @@ screen and (min-width: $desktop)and (min-resolution: 2dppx) {
 }
 
 .contacts__list{
-    height: 427px;
     background: $primary-white-color;
     box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
     border-radius: 24px;
@@ -119,7 +118,6 @@ screen and (min-width: $desktop)and (min-resolution: 2dppx) {
         flex-basis: calc(100% /3 - 20px);
         margin-left: 20px;
         margin-top:20px;
-        height: 100%;
     }
     
 }
@@ -129,7 +127,6 @@ screen and (min-width: $desktop)and (min-resolution: 2dppx) {
         flex-basis: calc(100% /3 - 31px);
         margin-left: 31px;
         margin-top:20px;
-        height: 100%;
     }
 }
 
@@ -330,7 +327,7 @@ screen and (min-width: $desktop)and (min-resolution: 2dppx) {
     flex-direction: column;
     margin-top: 25px;
     margin-left: 20px;
-    margin-bottom: 43px;
+    padding-bottom: 43px;
 
     .contacts__tel{
         font-family: $primary-font-family;
@@ -365,7 +362,7 @@ screen and (min-width: $desktop)and (min-resolution: 2dppx) {
     .contacts__detail{
         margin-left: 31px;
         margin-top: 30px;
-        margin-bottom: 50px;
+        padding-bottom: 50px;
     }
 
     .contacts__tel{
@@ -383,7 +380,7 @@ screen and (min-width: $desktop)and (min-resolution: 2dppx) {
     .contacts__detail{
         margin-left: 43px;
         margin-top: 32px;
-        margin-bottom: 61px;
+        padding-bottom: 61px;
     }
 
     .contacts__tel{
