@@ -1,31 +1,17 @@
 .contact{
-
-        @media screen and (max-width: $mobile){
-            padding-top:86px;
-            padding-bottom: 53px;
-        } 
-
-
-        @media screen and (min-width: $tablet){
-            padding-top:119px;
-            padding-bottom: 64px;
-        } 
-
-        @media screen and (min-width: $desktop){
-        padding-top:132px;
-        padding-bottom: 40px;
-        }   
+    padding-top:0px;
+    padding-bottom: 0px;
 
         @media screen and (min-width: 320px) and (max-width: 767px) {
-            background: linear-gradient(to top, $section-bg-primary 89.5%, $primary-white-color 10.5%);
+            background: linear-gradient(to top, #fff5f6 94.5%, #fff 5.5%);
         }
 
         @media screen and (min-width: 768px) and (max-width: 1279px) {
-            background: linear-gradient(to top, $section-bg-primary 78%, $primary-white-color 12%);
+            background: linear-gradient(to top, $section-bg-primary 87%, $primary-white-color 13%);
         } 
         
         @media screen and (min-width: 1280px){
-            background: linear-gradient(to top, $section-bg-primary 74.5%, $primary-white-color 25.5%);
+            background: linear-gradient(to top, $section-bg-primary 84.5%, $primary-white-color 15.5%);
         }
 }
 
