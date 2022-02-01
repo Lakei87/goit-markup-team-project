@@ -26,6 +26,13 @@
 .products__list {
   @media screen and (min-width: $tablet) {
     display: flex;
+    flex-wrap: wrap;
+    margin-right: -20px;
+    margin-top: -132px;
+  }
+  @media screen and (min-width: $desktop) {
+    margin-right: -29px;
+    margin-top: -250px;
   }
 }
 
@@ -35,8 +42,7 @@
   @media screen and (max-width: 767px) {
     margin: 0 auto;
     padding: 161px 53px 41px 53px;
-    width: 280px;
-    height: 485px;
+    max-width: 280px;
     &:not(:last-child) {
       margin-bottom: 132px;
     }
@@ -47,7 +53,7 @@
       margin-right: 20px;
     }
     width: 220px;
-    height: 485px;
+    margin-top: 132px;
     padding: 152px 11px 40px 10px;
   }
   @media screen and (min-width: $desktop) {
@@ -55,7 +61,7 @@
       margin-right: 29px;
     }
     width: 329px;
-    height: 525px;
+    margin-top: 250px;
     padding: 163px 44px 50px 44px;
   }
 }
@@ -68,6 +74,13 @@
     left: 50%;
     transform: translate(-50%, 0);
     content: '';
+    @media screen and(min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      & {
+        background-image: url(../images/products/icecream-desktop@2x.png);
+      }
+    }
     @media screen and (max-width: 767px) {
       top: -130px;
       width: 249px;
@@ -92,6 +105,13 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
+    @media screen and(min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      & {
+        background-image: url(../images/products/coffee-desktop@2x.png);
+      }
+    }
     @media screen and (max-width: 767px) {
       top: -130px;
       width: 249px;
@@ -116,6 +136,13 @@
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
+    @media screen and(min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      & {
+        background-image: url(../images/products/milkshake-desktop@2x.png);
+      }
+    }
     @media screen and (max-width: 767px) {
       top: -130px;
       width: 249px;
@@ -204,21 +231,20 @@
 }
 
 .products__btn {
+  @include btn-circle;
+  cursor: pointer;
   fill: $event-btn-secondary;
-  background-color: $primary-white-color;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+
   border: none;
   display: block;
   margin: 0 auto;
 }
-.ice-cream {
+.products--ice-cream {
   background-color: $bg-color-first;
 }
-.ice-coffee {
+.products--ice-coffee {
   background-color: $bg-color-second;
 }
-.milkshakes {
+.products--milkshakes {
   background-color: $bg-color-third;
 }
