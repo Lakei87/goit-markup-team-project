@@ -105,10 +105,15 @@ screen and (min-width: $desktop)and (min-resolution: 2dppx) {
 
 @media screen and (max-width:767px){
     .contacts__list{
-        max-width: 100%;
+        padding: 43px 20px;
+        width: 220px;
         margin-bottom: 20px;
-        margin-left: 30px;
-        margin-right: 30px;
+        margin-left: auto;
+        margin-right: auto;
+    } 
+    
+    .contacts__list:last-child{
+        margin-bottom: 0px;   
     }  
 }
 
@@ -132,9 +137,7 @@ screen and (min-width: $desktop)and (min-resolution: 2dppx) {
 
 .contacts__type{
     display: block;
-    padding-top: 43px;
     margin-bottom: 25px;
-    margin-left: 20px;
     border-radius: 4px;
 
     .contacts__cafe{
@@ -194,7 +197,6 @@ screen and (min-width: $desktop)and (min-resolution: 2dppx) {
 
 .contacts__title{
     display: block;
-    margin-left: 20px;
     margin-bottom: 25px;
 
     .contacts__city{
@@ -254,7 +256,6 @@ screen and (min-width: $desktop)and (min-resolution: 2dppx) {
 .contacts__schedule{
     display: block;
     margin-top: 25px;
-    margin-left: 20px;
     margin-bottom: 25px;
 
     .contacts__days{
@@ -326,8 +327,6 @@ screen and (min-width: $desktop)and (min-resolution: 2dppx) {
     display: flex;
     flex-direction: column;
     margin-top: 25px;
-    margin-left: 20px;
-    padding-bottom: 43px;
 
     .contacts__tel{
         font-family: $primary-font-family;
@@ -396,8 +395,6 @@ screen and (min-width: $desktop)and (min-resolution: 2dppx) {
 
 .contacts__line{
     max-width: 100%; 
-    margin-left: 20px;
-    margin-right: 20px;
     text-align: center; 
     border-bottom: 1px solid #E1E1E1;
 }
@@ -416,13 +413,13 @@ screen and (min-width: $desktop)and (min-resolution: 2dppx) {
     }
 }
 
-.contacts__block{
+.buttons__list{
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 54px;
 
-    .contacts__button{
+    .buttons__location{
         width: 161px;
         height: 44px;
         align-items: center;
@@ -442,7 +439,7 @@ screen and (min-width: $desktop)and (min-resolution: 2dppx) {
             background-color: #D41342;
         }
 
-        .contacts__span{
+        .buttons__span{
         font-family: $primary-font-family;
         font-style: normal;
         font-weight: bold;
@@ -451,31 +448,31 @@ screen and (min-width: $desktop)and (min-resolution: 2dppx) {
         align-items: center;
         }
 
-        .contacts__icon{
+        .buttons__icon{
             margin-left: 8px;
             fill:  $primary-white-color;
         }
 
         @media screen and (min-width:$tablet){
-            .contacts__icon{
+            .buttons__icon{
                 margin-left: 13px;
             }
         }
     }
 
     @media screen and (max-width:$mobile){
-        .contacts__button{
+        .buttons__location{
             width: 161px;
         }
     }
 
     @media screen and (min-width:$tablet){
-        .contacts__button{
+        .buttons__location{
             width: 191px;
         }
     }
 
-    .contacts__button:last-child{
+    .buttons__location:last-child{
         color: $primary-color;
         background-color: #FFFFFF;
         margin-bottom: 0px;
@@ -488,14 +485,14 @@ screen and (min-width: $desktop)and (min-resolution: 2dppx) {
             background-color: $event-btn-primary;
         }
     
-        .contacts__icon{
+        .buttons__icon{
             margin-left: 13px;
             fill:  $primary-color;
         }
     }
 
     @media screen and (min-width:$tablet) and (max-width:1279px){
-        .contacts__button:last-child{
+        .buttons__location:last-child{
             width: 174px;
             margin-left: 15px;
         }
@@ -503,7 +500,7 @@ screen and (min-width: $desktop)and (min-resolution: 2dppx) {
 }
 
 @media screen and (min-width:$tablet){
-    .contacts__block{
+    .buttons__list{
         margin-top: 81px;
         flex-direction: row;
         align-items: baseline;
@@ -512,10 +509,10 @@ screen and (min-width: $desktop)and (min-resolution: 2dppx) {
 }
 
 @media screen and (min-width:$desktop){
-    .contacts__button{
+    .buttons__location{
         width: 198px;
     }
-        .contacts__button:last-child{
+        .buttons__location:last-child{
             width: 180px;
             margin-left: 15px;
         }
