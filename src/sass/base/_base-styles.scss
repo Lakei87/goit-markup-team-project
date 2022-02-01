@@ -3,7 +3,6 @@
   margin-left: auto;
   padding-right: 20px;
   padding-left: 20px;
-  outline: 1px dashed #f44336;
 
   @media screen and (min-width: $mobile) {
     width: 480px;
@@ -35,35 +34,4 @@
     padding-top: 125px;
     padding-bottom: 125px;
   }
-}
-
-.section__title {
-  font-family: $secondary-font-family;
-  font-size: 58px;
-  line-height: 1.13;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: $primary-color;
-}
-
-.section__title--hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
-}
-
-.section__subtitle {
-  font-family: $secondary-font-family;
-  font-size: 30px;
-  line-height: 1.13;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: $subtitle-color;
 }
